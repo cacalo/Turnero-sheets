@@ -5,11 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<script src="js/credenciales.js"></script>
 	<script src="js/index.js" defer></script>
-	<script async defer src="https://apis.google.com/js/api.js" id="gapi"></script>
-	<script async defer src="https://accounts.google.com/gsi/client" id="gis"></script>
-	<script async defer src="js/sheets.js"></script>
 	<title>Document</title>
 </head>
 <body>
@@ -30,16 +26,5 @@
 		</div>
 	</main>
 
-
-	<!--Add buttons to initiate auth sequence and sign out-->
-	<div>
-		<button id="authorize_button" onclick="handleAuthClick()">Iniciar sesión</button>
-		<button id="signout_button" onclick="handleSignoutClick()">Cerrar sesión</button>
-	</div>
-
-	<pre id="content" style="white-space: pre-wrap;"></pre>
-
-	
-	<script src="js/auth.js"></script>
 </body>
 </html>

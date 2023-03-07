@@ -1,5 +1,36 @@
-// import turnos from "./turnos.js";
-
+let turnos =[{
+  id:1,
+  cliente: "Juan",
+  email: "email@gmail.com",
+  modelo: "Samsung algo",
+  problema: "Creo que pasó esto y lo otro",
+  fecha_terminado: ""
+},
+{
+  id:2,
+  cliente: "Pedro",
+  email: "email@gmail.com",
+  modelo: "Samsung algo",
+  problema: "Cambio de pantalla",
+  fecha_terminado: ""
+},
+{
+  id:3,
+  cliente: "Juana",
+  email: "email@gmail.com",
+  modelo: "Samsung algo",
+  problema: "Cambio de pantalla asfasfiopsaiuofdsa asiorfjasiofjoiajsoi hfiosahfosah fosaufosa",
+  fecha_terminado: ""
+},
+{
+  id:4,
+  cliente: "Petrona",
+  email: "email@gmail.com",
+  modelo: "Iphone algo",
+  problema: "Ejemplo de problema",
+  fecha_terminado: ""
+}
+]
 const turnosContainer = document.getElementById("turnosContainer");
 const detalleContainer = document.getElementById("detalleContainer");
 let indiceSeleccionado;
@@ -45,15 +76,12 @@ finalizar.addEventListener("click",()=> marcarTerminado(indiceSeleccionado))
 
 async function marcarTerminado(i){
   const updateTurno = turnos[i];
-  updateTurno.comentario = comentarioElement.value;
-  updateTurno.fecha_terminado = new Date().toISOString;
-  const res = await editTurno(updateTurno.id,updateTurno);
-  if(res.status === 200){
-    turnos = turnos.filter(turno => turno.id !== updateTurno.id);
-    indiceSeleccionado = 0;
-    await actualizarTarjetas()
-    detalleContainer.classList.toggle("escondido",true);
-    comentarioElement.value="";
-  }
+  turnos = turnos.filter(turno => turno.id !== updateTurno.id);
+  indiceSeleccionado = 0;
+  await actualizarTarjetas()
+  detalleContainer.classList.toggle("escondido",true);
+  comentarioElement.value="";
 }
+
+actualizarTarjetas();
 
