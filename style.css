@@ -1,0 +1,79 @@
+:root{
+  --color-text-titulos: #ffffff;
+  --color-texto: rgba(255, 255, 255, 0.867);
+  --color-acento: #E6E4C6;
+  --color-fondo: #0E3A47;
+  --color-fondo-tarjeta: #ffffff27;
+}
+
+body{
+  /* margin: 0; */
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h2,h3,h4,h5,h6{
+  color: var(--color-text-titulos);
+  margin: 0px;
+}
+
+button{
+  background-color: var(--color-acento);
+  padding: 20px;
+  font-weight: bold ;
+  border-radius: 2px;
+  border: unset;
+  cursor: pointer;
+}
+
+#turnosContainer{
+  display: flex;
+  /* max-width: 90%; */
+  margin-bottom: 20px;
+  overflow-x:auto;
+  width: 95vw;
+}
+
+.tarjeta{
+  border: 1px solid var(--color-fondo);
+  flex-basis: 200px;
+  padding: 10px;
+  background-color: var(--color-fondo-tarjeta);
+  user-select: none;
+  cursor: pointer;
+}
+.tarjeta:hover, .tarjeta.seleccionado{
+  background-color: var(--color-acento);
+  color: var(--color-fondo);
+}
+
+.tarjeta:hover h3, .tarjeta.seleccionado h3{
+  color: var(--color-fondo);
+}
+
+.tarjeta p{
+  White-Space: nowrap;
+  overflow: hidden;
+  Text-overflow: ellipsis;
+  margin: 0;
+}
+
+#detalleContainer{
+  background-color: var(--color-fondo-tarjeta);
+  padding:10px
+}
+#detalleContainer div{
+  margin-bottom:10px
+}
+#detalleContainer input{
+  padding:5px
+}
+
+.escondido{
+  display: none;
+}
