@@ -46,7 +46,6 @@ finalizar.addEventListener("click",()=> marcarTerminado(indiceSeleccionado))
 async function marcarTerminado(i){
   const updateTurno = turnos[i];
   updateTurno.comentario = comentarioElement.value;
-  updateTurno.fecha_terminado = new Date().toISOString;
   const res = await editTurno(updateTurno.id,updateTurno);
   if(res.status === 200){
     turnos = turnos.filter(turno => turno.id !== updateTurno.id);
