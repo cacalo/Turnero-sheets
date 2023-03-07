@@ -41,7 +41,7 @@ button{
 
 .tarjeta{
   border: 1px solid var(--color-fondo);
-  flex-basis: 200px;
+  max-width: 200px;
   padding: 10px;
   background-color: var(--color-fondo-tarjeta);
   user-select: none;
