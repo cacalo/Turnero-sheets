@@ -77,3 +77,11 @@ button{
 .escondido{
   display: none;
 }
+
+footer{
+  text-align: center;
+}
+
+footer a{
+  color: var(--color-texto);
+}
