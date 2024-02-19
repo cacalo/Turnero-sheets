@@ -34,7 +34,7 @@ async function getTurnos() {
   });
 }
 
-async function editTurno(id, contenido) {
+export async function editTurno(id, contenido) {
   const update = [
     contenido.id,
     contenido.cliente,
@@ -43,7 +43,7 @@ async function editTurno(id, contenido) {
     contenido.problema,
     new Date().toISOString(),
     contenido.comentario,
-  ]
+  ] /*
   const filaAEditar = parseInt(id)+1;
   response = await gapi.client.sheets.spreadsheets.values.update({
     spreadsheetId: SPREADSHEET,
@@ -51,5 +51,5 @@ async function editTurno(id, contenido) {
     values: [update],
     valueInputOption:"USER_ENTERED"
   });
-  return response;
+  return response;*/
 }

@@ -1,4 +1,5 @@
-// import turnos from "./turnos.js";
+import turnos from "./turnos.js";
+import { editTurno } from "./sheets.js";
 
 const turnosContainer = document.getElementById("turnosContainer");
 const detalleContainer = document.getElementById("detalleContainer");
@@ -56,3 +57,4 @@ async function marcarTerminado(i){
   }
 }
 
+actualizarTarjetas();
